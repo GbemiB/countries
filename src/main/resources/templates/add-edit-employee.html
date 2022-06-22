@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>Add Employee</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container my-5">
+    <h3> Add Employee</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+                <form action="#" method="post" th:action="@{/createEmployee}" th:object="${employee}">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label class="col-form-label" for="name">First Name</label>
+                            <input class="form-control" id="countryCode" placeholder="First Name"
+                                   th:field="*{countryCode}" type="text"/>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label class="col-form-label" for="name">Last Name</label>
+                            <input class="form-control" id="countryName" placeholder="Last Name"
+                                   th:field="*{countryName}" type="text"/>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label class="col-form-label" for="countryDesc">Email</label>
+                            <input class="form-control" id="countryDesc" placeholder="Email Id"
+                                   th:field="*{countryDesc}" type="text"/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input class="btn btn-primary" type="submit" value=" Submit ">
+                        </div>
+
+                        <input id="id" th:field="*{id}" type="hidden">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
